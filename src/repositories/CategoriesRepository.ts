@@ -1,4 +1,4 @@
-import { Category } from "../model/Category";
+import Category from "../model/Category";
 
 interface ICreateCategoryDTO {
   name: string;
@@ -32,4 +32,4 @@ class CategoriesRepository {
   }
 }
 
-export { CategoriesRepository };
+export default CategoriesRepository;

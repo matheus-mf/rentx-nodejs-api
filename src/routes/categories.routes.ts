@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
+import CategoriesRepository from "../repositories/CategoriesRepository";
 import CreateCategoryService from "../services/CreateCategoryService";
 
 const categoriesRoutes = Router();
@@ -28,4 +28,4 @@ categoriesRoutes.post("/", (request, response) => {
   }
 });
 
-export { categoriesRoutes };
+export default categoriesRoutes;
