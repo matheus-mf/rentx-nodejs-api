@@ -5,7 +5,7 @@ interface IRequest {
   description: string;
 }
 
-class CreateCategoryService {
+export default class CreateCategoryService {
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
   execute({ name, description }: IRequest): void {
@@ -21,5 +21,3 @@ class CreateCategoryService {
     });
   }
 }
-
-export default CreateCategoryService;

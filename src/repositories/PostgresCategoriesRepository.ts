@@ -4,7 +4,8 @@ import {
   ICreateCategoryDTO,
 } from "./ICategoriesRepository";
 
-class PostgresCategoriesRepository implements ICategoriesRepository {
+export default class PostgresCategoriesRepository
+  implements ICategoriesRepository {
   private readonly categoriesPg: Category[];
 
   constructor() {
@@ -30,5 +31,3 @@ class PostgresCategoriesRepository implements ICategoriesRepository {
     return this.categoriesPg.find((category) => category.name === name);
   }
 }
-
-export default PostgresCategoriesRepository;
