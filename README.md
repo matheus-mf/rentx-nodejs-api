@@ -8,3 +8,9 @@
 - [Express](https://expressjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ts-node-dev](https://yarnpkg.com/package/ts-node-dev)
+
+## Diagramação
+
+![Esquema banco de dados](.github/diagrama.png)
+
+
