@@ -4,15 +4,15 @@ import {
   ICreateCategoryDTO,
 } from "./ICategoriesRepository";
 
-class CategoriesRepository implements ICategoriesRepository {
-  private readonly categories: Category[];
+class PostgresCategoriesRepository implements ICategoriesRepository {
+  private readonly categoriesPg: Category[];
 
   constructor() {
-    this.categories = [];
+    this.categoriesPg = [];
   }
 
   list(): Category[] {
-    return this.categories;
+    return this.categoriesPg;
   }
 
   create({ name, description }: ICreateCategoryDTO): void {
@@ -23,12 +23,12 @@ class CategoriesRepository implements ICategoriesRepository {
       created_ad: new Date(),
     });
 
-    this.categories.push(category);
+    this.categoriesPg.push(category);
   }
 
   findByName(name: string): Category {
-    return this.categories.find((category) => category.name === name);
+    return this.categoriesPg.find((category) => category.name === name);
   }
 }
 
-export default CategoriesRepository;
+export default PostgresCategoriesRepository;
