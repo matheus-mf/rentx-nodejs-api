@@ -9,6 +9,7 @@
 - [TypeScript](https://www.typescriptlang.org/)
 - [ts-node-dev](https://yarnpkg.com/package/ts-node-dev)
 - [multer](https://github.com/expressjs/multer)
+- [CSV Parse](https://csv.js.org/parse/)
 
 ## Diagramação
 
