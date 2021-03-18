@@ -2,6 +2,7 @@
 node_modules/
 dist/
 
-yarn-*.log
+/tmp/*
+!/tmp/.gitkeep
 
-asdasd
+yarn-*.log
