@@ -7,8 +7,17 @@ import {
 export default class CategoriesRepository implements ICategoriesRepository {
   private readonly categories: Category[];
 
-  constructor() {
+  private static INSTANCE: CategoriesRepository;
+
+  private constructor() {
     this.categories = [];
+  }
+
+  public static getInstance(): CategoriesRepository {
+    if (!CategoriesRepository.INSTANCE) {
+      CategoriesRepository.INSTANCE = new CategoriesRepository();
+    }
+    return CategoriesRepository.INSTANCE;
   }
 
   list(): Category[] {
