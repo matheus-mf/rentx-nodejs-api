@@ -1,0 +1,14 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "RentalX Documentation",
+        "description": "This is an API Rent",
+        "version": "1.0.0",
+        "contact": {
+            "email": "matheusmoreira.g6@gmail.com",
+            "url": "https://www.linkedin.com/in/matheus-m-ferreira"
+        }
+    },
+    "paths": {
+    }
+}

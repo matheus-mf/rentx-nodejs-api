@@ -10,6 +10,7 @@
 - [ts-node-dev](https://yarnpkg.com/package/ts-node-dev)
 - [multer](https://github.com/expressjs/multer)
 - [CSV Parse](https://csv.js.org/parse/)
+- [Swagger UI Express](https://yarnpkg.com/package/swagger-ui-express)
 
 ## Diagramação
 
