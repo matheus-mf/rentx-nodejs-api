@@ -30,6 +30,9 @@ export default class ImportCategoryUseCase {
           });
         })
         .on("end", () => {
+          fs.promises.unlink(file.path).then(() => {
+            console.log("📄 deleted file");
+          });
           resolve(categories);
         })
         .on("error", (err) => {
