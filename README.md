@@ -1,4 +1,4 @@
-<h1 align="center">API Node.js par RentlX</h1>
+<h1 align="center">API Node.js par RentX</h1>
 
 ## Tecnologias
 
@@ -13,6 +13,7 @@
 - [Swagger UI Express](https://yarnpkg.com/package/swagger-ui-express)
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
+- [TypeORM](https://typeorm.io/)
 
 ## Iniciar projeto via Docker
 
@@ -26,7 +27,7 @@
 
 ### logs
 
-`docker-compose logs rentx -f`
+`docker logs SERVICE -f`
 
 ### Para serviços
 
