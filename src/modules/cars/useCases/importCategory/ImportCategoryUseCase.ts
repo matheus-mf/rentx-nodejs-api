@@ -1,5 +1,4 @@
 import csvParse from "csv-parse";
-import { resolve } from "eslint-import-resolver-typescript";
 import fs from "fs";
 
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";

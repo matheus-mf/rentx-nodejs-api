@@ -11,6 +11,30 @@
 - [multer](https://github.com/expressjs/multer)
 - [CSV Parse](https://csv.js.org/parse/)
 - [Swagger UI Express](https://yarnpkg.com/package/swagger-ui-express)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+
+## Iniciar projeto via Docker
+
+### Criar e iniciar configurações
+
+`docker-compose up`
+
+### Iniciar serviços
+
+`docker-compose start`
+
+### logs
+
+`docker-compose logs rentx -f`
+
+### Para serviços
+
+`docker-compose stop`
+
+### Para e remover as configurações
+
+`docker-compose down`
 
 ## Diagramação
 
