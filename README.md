@@ -14,6 +14,7 @@
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [TypeORM](https://typeorm.io/)
+- [TSyringe](https://github.com/microsoft/tsyringe)
 
 ## Iniciar projeto via Docker
 
