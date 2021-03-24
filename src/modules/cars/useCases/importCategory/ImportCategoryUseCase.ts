@@ -16,7 +16,7 @@ export default class ImportCategoryUseCase {
     private categoriesRepository: ICategoriesRepository
   ) {}
 
-  loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
+  async loadCategories(file: Express.Multer.File): Promise<IImportCategory[]> {
     return new Promise((resolve, reject) => {
       const stream = fs.createReadStream(file.path);
 
@@ -50,7 +50,7 @@ export default class ImportCategoryUseCase {
     categories.map(async ({ name, description }) => {
       const existCategory = this.categoriesRepository.findByName(name);
       if (!existCategory) {
-        this.categoriesRepository.create({ name, description });
+        await this.categoriesRepository.create({ name, description });
       }
     });
   }
