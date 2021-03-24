@@ -1,4 +1,4 @@
-<h1 align="center">API Node.js par RentalX</h1>
+<h1 align="center">API Node.js par RentlX</h1>
 
 ## Tecnologias
 
