@@ -48,7 +48,7 @@ export default class ImportCategoryUseCase {
   async execute(file: Express.Multer.File): Promise<void> {
     const categories = await this.loadCategories(file);
     categories.map(async ({ name, description }) => {
-      const existCategory = this.categoriesRepository.findByName(name);
+      const existCategory = await this.categoriesRepository.findByName(name);
       if (!existCategory) {
         await this.categoriesRepository.create({ name, description });
       }

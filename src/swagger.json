@@ -76,6 +76,72 @@
                     }
                 }
             }
+        },
+        "/categories/import": {
+            "post": {
+                "tags": ["Category"],
+                "summary": "Upload new a category",
+                "description": "Upload new a category",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "file": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/specifications": {
+            "post": {
+                "tags": ["Specifications"],
+                "summary": "Create a specification",
+                "description": "Create a specification",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Specification"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "500": {
+                        "description": "Specifications already exists!"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Specification": {
+                "type": "object",
+                "properties": {
+                    "name":{
+                        "type": "string"
+                    },
+                    "description":{
+                        "type": "string"
+                    }
+                }
+            }
         }
     }
 }
