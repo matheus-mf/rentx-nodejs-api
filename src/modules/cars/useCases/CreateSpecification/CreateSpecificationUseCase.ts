@@ -15,7 +15,7 @@ export default class CreateSpecificationUseCase {
   ) {}
 
   public async execute({ description, name }: IResquet): Promise<void> {
-    const specificationAlreadyExists = this.specificationsRepository.findByName(
+    const specificationAlreadyExists = await this.specificationsRepository.findByName(
       name
     );
 
