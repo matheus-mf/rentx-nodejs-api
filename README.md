@@ -16,6 +16,7 @@
 - [TypeORM](https://typeorm.io/)
 - [TSyringe](https://github.com/microsoft/tsyringe)
 - [bcrypt](https://yarnpkg.com/package/bcrypt)
+- [JWT](https://jwt.io/)
 
 ## Iniciar projeto via Docker
 
