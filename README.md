@@ -15,6 +15,7 @@
 - [Docker Compose](https://docs.docker.com/compose/)
 - [TypeORM](https://typeorm.io/)
 - [TSyringe](https://github.com/microsoft/tsyringe)
+- [bcrypt](https://yarnpkg.com/package/bcrypt)
 
 ## Iniciar projeto via Docker
 
