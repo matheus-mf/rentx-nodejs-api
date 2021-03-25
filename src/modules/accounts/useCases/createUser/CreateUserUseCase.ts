@@ -17,6 +17,12 @@ export default class CreateUserUseCase {
     password,
     driver_license,
   }: ICreateUserDTO): Promise<void> {
+    const checkEmail = await this.usersRepository.findByEmail(email);
+
+    if (checkEmail) {
+      throw new Error("E-mail in use.");
+    }
+
     const passwordHash = await hash(password, 8);
 
     await this.usersRepository.create({
