@@ -7,7 +7,7 @@ import router from "./routes";
 import swaggerFile from "./swagger.json";
 
 import "./database";
-import "./shered/container";
+import "./shared/container";
 
 const app = express();
 
