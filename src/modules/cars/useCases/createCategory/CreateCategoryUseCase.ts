@@ -1,5 +1,6 @@
 import { inject, injectable } from "tsyringe";
 
+import AppErre from "../../../../errors/AppErre";
 import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
 
 interface IRequest {
@@ -19,7 +20,7 @@ export default class CreateCategoryUseCase {
     );
 
     if (categoryAlreadyExists) {
-      throw new Error("Category Already exists!");
+      throw new AppErre("Category Already exists!");
     }
 
     await this.categoriesRepository.create({
