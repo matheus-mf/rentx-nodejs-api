@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 
-import AppErre from "../../../../errors/AppErre";
+import AppError from "../../../../errors/AppError";
 import { ISpecificationsRepository } from "../../repositories/ISpecificationsRepository";
 
 interface IResquet {
@@ -21,7 +21,7 @@ export default class CreateSpecificationUseCase {
     );
 
     if (specificationAlreadyExists) {
-      throw new AppErre("Specification Already exists!");
+      throw new AppError("Specification Already exists!");
     }
 
     await this.specificationsRepository.create({
