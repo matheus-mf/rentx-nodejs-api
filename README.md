@@ -17,6 +17,7 @@
 - [TSyringe](https://github.com/microsoft/tsyringe)
 - [bcrypt](https://yarnpkg.com/package/bcrypt)
 - [JWT](https://jwt.io/)
+- [Jest](https://jestjs.io/)
 
 ## Iniciar projeto via Docker
 
