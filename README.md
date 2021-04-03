@@ -19,6 +19,8 @@
 - [JWT](https://jwt.io/)
 - [Jest](https://jestjs.io/)
 
+---
+
 ## Iniciar projeto via Docker
 
 ### Criar e iniciar configurações
@@ -41,8 +43,78 @@
 
 `docker-compose down`
 
+---
+
 ## Diagramação
 
 ![Esquema banco de dados](.github/diagrama.png)
 
+---
 
+## Requisitos e Regras de negócio
+
+- **RF**: Requisitos Funcionais;
+- **RNF**: Requisitos Não Funcionais;
+- **RN**: Regras de negócio.
+
+### Cadastro de Carro
+ 
+#### RF
+- [ ] Deve ser possível cadastro um novo carro;
+- [ ] Deve ser possível listar todas as categorias.
+
+#### RN
+- [ ] Não deve ser possível cadastro um carro com a placa já existente;
+- [ ] Não deve ser possível alterar aplaca de um carro já cadastrado;
+- [ ] O carro pode padrão, deve ser cadastrado com disponível;
+- [ ] O usuário responsável pelo cadastro deve ser um administrado.
+
+
+### Listagem de Carro
+ 
+#### RF
+- [ ] Deve ser possível listar todos os carros disponíveis.
+- [ ] Deve ser possível listar todos os carros disponíveis através do nome da categoria;
+- [ ] Deve ser possível listar todos os carros disponíveis através do nome da marca;
+- [ ] Deve ser possível listar todos os carros disponíveis através do nome do carro.
+
+#### RN
+- [ ] O usuário não precisa estar autenticado para lista os carros.
+
+
+### Cadastro de especificação no carro
+ 
+#### RF
+- [ ] Deve ser possível cadastrar uma especificação para um carro;
+- [ ] Deve ser possível listar todas as especificações;
+- [ ] Deve ser possível listar todos os carros.
+
+#### RN
+- [ ] Não deve ser possível cadastrar uma especificação para um carro não cadastrado;
+- [ ] Não deve ser possível cadastrar uma especificação já existente para o mesmo carro;
+- [ ] O usuário responsável pelo cadastro deve ser um administrado.
+
+
+### Cadastro de imagens do carro
+
+#### RF
+- [ ] Deve ser possível a imagem do carro;
+- [ ] Deve ser possível listar todos os carros.
+
+#### RNF
+- [ ] Utilizar o multer para envio dos arquivos.
+
+#### RN
+- [ ] O usuário deve ser capaz de cadastrar mais de uma imagem para o mesmo carro;
+- [ ] O usuário responsável pelo cadastro deve ser um administrado.
+
+
+### Aluguel de carro
+
+#### RF
+- [ ] Deve ser possível cadastra um aluguel.
+
+#### RN
+- [ ] O aluguel deve ter duração minima de 24 hora;
+- [ ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo usuário;
+- [ ] Não deve ser possível cadastrar um novo aluguel caso já exista um aberto para o mesmo carro.
