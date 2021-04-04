@@ -60,14 +60,12 @@
 ### Cadastro de Carro
  
 #### RF
-- [ ] Deve ser possível cadastro um novo carro;
-- [ ] Deve ser possível listar todas as categorias.
+- [x] Deve ser possível cadastro um novo carro.
 
 #### RN
-- [ ] Não deve ser possível cadastro um carro com a placa já existente;
-- [ ] Não deve ser possível alterar aplaca de um carro já cadastrado;
-- [ ] O carro pode padrão, deve ser cadastrado com disponível;
-- [ ] O usuário responsável pelo cadastro deve ser um administrado.
+- [x] Não deve ser possível cadastro um carro com a placa já existente;
+- [x] O carro pode padrão, deve ser cadastrado com disponível;
+- [ ] O usuário responsável pelo cadastro deve ser um administrado. *
 
 
 ### Listagem de Carro
