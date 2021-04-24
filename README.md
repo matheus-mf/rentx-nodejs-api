@@ -65,19 +65,19 @@
 #### RN
 - [x] Não deve ser possível cadastro um carro com a placa já existente;
 - [x] O carro pode padrão, deve ser cadastrado com disponível;
-- [ ] O usuário responsável pelo cadastro deve ser um administrado. *
+- [x] O usuário responsável pelo cadastro deve ser um administrado.
 
 
 ### Listagem de Carro
  
 #### RF
-- [ ] Deve ser possível listar todos os carros disponíveis.
-- [ ] Deve ser possível listar todos os carros disponíveis através do nome da categoria;
-- [ ] Deve ser possível listar todos os carros disponíveis através do nome da marca;
-- [ ] Deve ser possível listar todos os carros disponíveis através do nome do carro.
+- [x] Deve ser possível listar todos os carros disponíveis.
+- [x] Deve ser possível listar todos os carros disponíveis através do nome da categoria;
+- [x] Deve ser possível listar todos os carros disponíveis através do nome da marca;
+- [x] Deve ser possível listar todos os carros disponíveis através do nome do carro.
 
 #### RN
-- [ ] O usuário não precisa estar autenticado para lista os carros.
+- [x] O usuário não precisa estar autenticado para lista os carros.
 
 
 ### Cadastro de especificação no carro
