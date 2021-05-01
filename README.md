@@ -94,15 +94,14 @@
 ### Cadastro de imagens do carro
 
 #### RF
-- [ ] Deve ser possível a imagem do carro;
-- [ ] Deve ser possível listar todos os carros.
+- [x] Deve ser possível a imagem do carro;
 
 #### RNF
-- [ ] Utilizar o multer para envio dos arquivos.
+- [x] Utilizar o multer para envio dos arquivos.
 
 #### RN
-- [ ] O usuário deve ser capaz de cadastrar mais de uma imagem para o mesmo carro;
-- [ ] O usuário responsável pelo cadastro deve ser um administrado.
+- [x] O usuário deve ser capaz de cadastrar mais de uma imagem para o mesmo carro;
+- [x] O usuário responsável pelo cadastro deve ser um administrado.
 
 
 ### Aluguel de carro
