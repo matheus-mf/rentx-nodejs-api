@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
-export class CreateCarsImages1619876795190 implements MigrationInterface {
+export class CreateRentals1622919429345 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: "cars_image",
+        name: "rentals",
         columns: [
           {
             name: "id",
@@ -16,8 +16,25 @@ export class CreateCarsImages1619876795190 implements MigrationInterface {
             type: "uuid",
           },
           {
-            name: "image_name",
-            type: "varchar",
+            name: "user_id",
+            type: "uuid",
+          },
+          {
+            name: "start_date",
+            type: "timestamp",
+            default: "now()",
+          },
+          {
+            name: "end_date",
+            type: "timestamp",
+          },
+          {
+            name: "expected_return_date",
+            type: "timestamp",
+          },
+          {
+            name: "total",
+            type: "numeric",
           },
           {
             name: "created_at",
@@ -32,10 +49,18 @@ export class CreateCarsImages1619876795190 implements MigrationInterface {
         ],
         foreignKeys: [
           {
-            name: "FK_CarImage",
+            name: "FK_CarRental",
             referencedTableName: "cars",
             referencedColumnNames: ["id"],
             columnNames: ["car_id"],
+            onDelete: "SET NULL",
+            onUpdate: "SET NULL",
+          },
+          {
+            name: "FK_UserRental",
+            referencedTableName: "users",
+            referencedColumnNames: ["id"],
+            columnNames: ["user_id"],
             onDelete: "SET NULL",
             onUpdate: "SET NULL",
           },
@@ -45,6 +70,6 @@ export class CreateCarsImages1619876795190 implements MigrationInterface {
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable("cars_image");
+    await queryRunner.dropTable("rentals");
   }
 }
