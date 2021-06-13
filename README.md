@@ -109,7 +109,7 @@
 ### Aluguel de carro
 
 #### RF
-- [ ] Deve ser possível cadastra um aluguel.
+- [x] Deve ser possível cadastra um aluguel.
 
 #### RN
 - [x] O aluguel deve ter duração minima de 24 hora;
