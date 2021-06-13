@@ -16,8 +16,10 @@
 - [TypeORM](https://typeorm.io/)
 - [TSyringe](https://github.com/microsoft/tsyringe)
 - [bcrypt](https://yarnpkg.com/package/bcrypt)
+- [Day.js](https://day.js.org/)
 - [JWT](https://jwt.io/)
 - [Jest](https://jestjs.io/)
+- [SuperTest](https://github.com/visionmedia/supertest#readme)
 
 ---
 

@@ -9,12 +9,11 @@ services:
       - 3333:3333
     volumes:
       - .:/usr/app
-    network_mode: host
     depends_on:
-      - databese_ignite
-  databese_ignite:
+      - database
+  database:
     image: postgres
-    container_name: databese_ignite
+    container_name: database_ignite
     restart: always
     ports:
       - 5432:5432
@@ -24,4 +23,3 @@ services:
       POSTGRES_DB: "rentx"
     volumes:
       - pgdata:/data/postgres
-    network_mode: host
