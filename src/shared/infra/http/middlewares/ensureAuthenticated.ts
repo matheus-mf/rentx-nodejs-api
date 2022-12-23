@@ -1,6 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
 
+import authConfig from "@config/auth";
 import { UsersRepository } from "@modules/accounts/infra/typeorm/repositories/UsersRepository";
 import AppError from "@shared/errors/AppError";
 
@@ -14,7 +15,8 @@ export default async function ensureAuthenticated(
   request: Request,
   response: Response,
   next: NextFunction
-) {
+): Promise<void> {
+  const { secret_token } = authConfig;
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {
@@ -22,10 +24,7 @@ export default async function ensureAuthenticated(
   }
   const [, token] = authHeader.split(" ");
   try {
-    const { sub: user_id } = verify(
-      token,
-      "b5fd664ba7c28a798365d454d651b5ee"
-    ) as IPayload;
+    const { sub: user_id } = verify(token, secret_token) as IPayload;
 
     const usersRepository = new UsersRepository();
 

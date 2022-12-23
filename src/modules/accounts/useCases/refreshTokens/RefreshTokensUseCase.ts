@@ -1,5 +1,5 @@
 import { sign, verify } from "jsonwebtoken";
-import { inject } from "tsyringe";
+import { inject, injectable } from "tsyringe";
 
 import authConfig from "@config/auth";
 import { IUsersTokensRepository } from "@modules/accounts/repositories/IUsersTokensRepository";
@@ -11,7 +11,13 @@ interface IPayload {
   email: string;
 }
 
-export default class RefreshTokenUseCase {
+interface IResponse {
+  token: string;
+  refresh_token: string;
+}
+
+@injectable()
+export default class RefreshTokensUseCase {
   constructor(
     @inject("UsersTokensRepository")
     private usersTokensRepository: IUsersTokensRepository,
@@ -19,20 +25,22 @@ export default class RefreshTokenUseCase {
     private dateProvider: IDateProvider
   ) {}
 
-  async execute(token: string) {
+  async execute(old_token: string): Promise<IResponse> {
     const {
+      secret_token,
+      expires_in_token,
       secret_refresh_token,
       expires_in_refresh_token,
       expires_in_refresh_token_days,
     } = authConfig;
 
-    const { email, sub } = verify(token, secret_refresh_token) as IPayload;
+    const { email, sub } = verify(old_token, secret_refresh_token) as IPayload;
 
     const user_id = sub;
 
     const userToken = await this.usersTokensRepository.findByUserIdAndRefreshToken(
       user_id,
-      token
+      old_token
     );
 
     if (!userToken) {
@@ -56,6 +64,14 @@ export default class RefreshTokenUseCase {
       expires_date,
     });
 
-    return refresh_token;
+    const token = sign({}, secret_token, {
+      subject: user_id,
+      expiresIn: expires_in_token,
+    });
+
+    return {
+      token,
+      refresh_token,
+    };
   }
 }
