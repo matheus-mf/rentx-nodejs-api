@@ -1,3 +1,11 @@
+export interface ISendMailProps {
+  to: string;
+  from?: string;
+  subject: string;
+  variables: unknown;
+  path: string;
+}
+
 export interface IMailProvider {
-  sendMail(to: string, subject: string, body: string): Promise<void>;
+  sendMail(data: ISendMailProps): Promise<void>;
 }
