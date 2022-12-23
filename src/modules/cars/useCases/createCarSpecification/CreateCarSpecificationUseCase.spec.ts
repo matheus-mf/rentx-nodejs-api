@@ -54,6 +54,6 @@ describe("Create Car Specification", () => {
         car_id,
         specifications_id,
       })
-    ).rejects.toBeInstanceOf(AppError);
+    ).rejects.toEqual(new AppError("Car does not exists!"));
   });
 });
