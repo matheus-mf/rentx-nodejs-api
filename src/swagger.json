@@ -177,6 +177,38 @@
                     }
                 }
             }
+        },
+        "/users/avatar": {
+            "patch": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Update image user",
+                "description": "Update image user",
+                "security": [
+                    {"bearerAuth": []}
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "avatar": {
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "204": {
+                        "description": "Created"
+                    }
+                }
+            }
         }
     },
     "components": {
