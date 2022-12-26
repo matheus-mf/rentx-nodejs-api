@@ -8,3 +8,5 @@ yarn-*.log
 .env
 
 coverage/
+
+ormconfig.json
