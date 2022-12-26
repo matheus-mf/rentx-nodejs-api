@@ -11,6 +11,12 @@ services:
       - .:/usr/app
     depends_on:
       - database
+  
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+  
   database:
     image: postgres
     container_name: database_ignite
